@@ -1,0 +1,356 @@
+/* ===================================================================
+   VILLA GALINI — SCRIPT
+   Vanilla JS only. Handles: language switching (EN/GR), sticky nav
+   state, mobile menu toggle, and the gallery lightbox.
+   =================================================================== */
+
+(function () {
+  "use strict";
+
+  /* -----------------------------------------------------------------
+     1. TRANSLATIONS
+     All page copy lives here. To add a new language, duplicate the
+     "en" block, translate the values, and add a button in the
+     language switcher markup with the matching data-lang attribute.
+     ----------------------------------------------------------------- */
+  const translations = {
+    en: {
+      "nav.about": "About",
+      "nav.amenities": "Amenities",
+      "nav.gallery": "Gallery",
+      "nav.location": "Location",
+      "nav.contact": "Contact",
+
+      "hero.eyebrow": "A Private Retreat on the Aegean",
+      "hero.tagline": "Where the sea meets stillness, and summer slows down.",
+      "hero.cta": "Plan Your Stay",
+
+      "about.eyebrow": "The Villa",
+      "about.title": "A home carved from light and stone",
+      "about.p1": "Tucked above a quiet cove, Villa Georgia Dream blends whitewashed Cycladic architecture with warm, contemporary interiors. Every room opens to the sea breeze, and every evening ends with the sky turning gold over the water. This is a house built for slow mornings, long lunches, and the kind of quiet that's hard to find anywhere else.",
+      "about.p2": "Sleeping up to eight guests across four bedrooms, the villa is ideal for families and friends seeking privacy, comfort and an authentic taste of island life.",
+      "about.fact1": "Bedrooms",
+      "about.fact2": "Bathrooms",
+      "about.fact3": "Guests",
+      "about.fact4": "Living Space",
+
+      "amenities.eyebrow": "Comfort & Ease",
+      "amenities.title": "Everything you need, nothing you don't",
+      "amenities.wifi.title": "High-Speed WiFi",
+      "amenities.wifi.desc": "Stay connected on the terrace or by the pool.",
+      "amenities.ac.title": "Air Conditioning",
+      "amenities.ac.desc": "Climate control in every bedroom and living space.",
+      "amenities.kitchen.title": "Fully Equipped Kitchen",
+      "amenities.kitchen.desc": "Everything you need to cook like a local.",
+      "amenities.parking.title": "Private Parking",
+      "amenities.parking.desc": "Secure on-site parking for your vehicle.",
+      "amenities.seaview.title": "Sea View",
+      "amenities.seaview.desc": "Uninterrupted Aegean views from every terrace.",
+      "amenities.family.title": "Family Friendly",
+      "amenities.family.desc": "Safe, spacious and comfortable for all ages.",
+
+      "gallery.eyebrow": "Take a Look",
+      "gallery.title": "A glimpse inside Villa Georgia Dream",
+
+      "location.eyebrow": "Find Us",
+      "location.title": "Steps from the sea, close to everything",
+      "location.desc": "Villa Georgia Dream sits on a quiet hillside just a five-minute walk from a sheltered swimming cove, with the village square, tavernas and local markets only minutes away by car.",
+      "location.item1": "1 min walk to the nearest beach",
+      "location.item2": "10 min drive to the village centre",
+      "location.item3": "35 min from the airport",
+      "location.item4": "Tavernas, cafés and bakeries nearby",
+
+      "contact.eyebrow": "Get in Touch",
+      "contact.title": "Ready to plan your stay?",
+      "contact.subtitle": "Reach out directly — we typically reply within a few hours.",
+      "contact.call": "Call Us",
+      "contact.email": "Email Us",
+      "contact.whatsapp": "WhatsApp",
+      "contact.whatsapp_cta": "Message us instantly",
+
+      "footer.tagline": "A private holiday house by the Aegean Sea.",
+      "footer.rights": "All rights reserved."
+    },
+
+    gr: {
+      "nav.about": "Σχετικά",
+      "nav.amenities": "Παροχές",
+      "nav.gallery": "Φωτογραφίες",
+      "nav.location": "Τοποθεσία",
+      "nav.contact": "Επικοινωνία",
+
+      "hero.eyebrow": "Ένα Ιδιωτικό Καταφύγιο στο Αιγαίο",
+      "hero.tagline": "Εκεί όπου η θάλασσα συναντά τη γαλήνη και το καλοκαίρι κυλά αργά.",
+      "hero.cta": "Σχεδιάστε τη Διαμονή Σας",
+
+      "about.eyebrow": "Η Βίλα",
+      "about.title": "Ένα σπίτι σκαλισμένο από φως και πέτρα",
+      "about.p1": "Χτισμένη πάνω από έναν ήσυχο κολπίσκο, η Villa Georgia Dream συνδυάζει την ασπρισμένη κυκλαδίτικη αρχιτεκτονική με ζεστές, σύγχρονες εσωτερικές διαμορφώσεις. Κάθε δωμάτιο ανοίγει στο θαλάσσιο αεράκι, και κάθε βράδυ τελειώνει με τον ουρανό να βάφεται χρυσός πάνω από το νερό. Είναι ένα σπίτι φτιαγμένο για αργά πρωινά, μακρά γεύματα και μια ησυχία που σπάνια συναντάς αλλού.",
+      "about.p2": "Φιλοξενώντας έως οκτώ άτομα σε τέσσερα υπνοδωμάτια, η βίλα είναι ιδανική για οικογένειες και φίλους που αναζητούν ιδιωτικότητα, άνεση και μια αυθεντική γεύση νησιώτικης ζωής.",
+      "about.fact1": "Υπνοδωμάτια",
+      "about.fact2": "Μπάνια",
+      "about.fact3": "Επισκέπτες",
+      "about.fact4": "Χώρος Διαβίωσης",
+
+      "amenities.eyebrow": "Άνεση & Ευκολία",
+      "amenities.title": "Όλα όσα χρειάζεστε, τίποτα παραπάνω",
+      "amenities.wifi.title": "Γρήγορο WiFi",
+      "amenities.wifi.desc": "Μείνετε συνδεδεμένοι στη βεράντα ή δίπλα στην πισίνα.",
+      "amenities.ac.title": "Κλιματισμός",
+      "amenities.ac.desc": "Έλεγχος θερμοκρασίας σε κάθε δωμάτιο και χώρο διαβίωσης.",
+      "amenities.kitchen.title": "Πλήρως Εξοπλισμένη Κουζίνα",
+      "amenities.kitchen.desc": "Όλα όσα χρειάζεστε για να μαγειρέψετε σαν ντόπιος.",
+      "amenities.parking.title": "Ιδιωτική Θέση Στάθμευσης",
+      "amenities.parking.desc": "Ασφαλής χώρος στάθμευσης για το όχημά σας.",
+      "amenities.seaview.title": "Θέα στη Θάλασσα",
+      "amenities.seaview.desc": "Απεριόριστη θέα στο Αιγαίο από κάθε βεράντα.",
+      "amenities.family.title": "Φιλικό προς Οικογένειες",
+      "amenities.family.desc": "Ασφαλής, ευρύχωρος χώρος, άνετος για όλες τις ηλικίες.",
+
+      "gallery.eyebrow": "Μια Γεύση",
+      "gallery.title": "Μια ματιά στο εσωτερικό της Villa Georgia Dream",
+
+      "location.eyebrow": "Βρείτε Μας",
+      "location.title": "Λίγα βήματα από τη θάλασσα, κοντά σε όλα",
+      "location.desc": "Η Villa Georgia Dream βρίσκεται σε έναν ήσυχο λόφο, μόλις πέντε λεπτά με τα πόδια από έναν προστατευμένο κολπίσκο, με την πλατεία του χωριού, ταβέρνες και τοπικές αγορές λίγα λεπτά με το αυτοκίνητο.",
+      "location.item1": "1 λεπτό με τα πόδια από την παραλία",
+      "location.item2": "10 λεπτά με το αυτοκίνητο από το κέντρο του χωριού",
+      "location.item3": "35 λεπτά από το αεροδρόμιο",
+      "location.item4": "Ταβέρνες, καφέ και φούρνοι εδώ κοντά",
+
+      "contact.eyebrow": "Επικοινωνήστε",
+      "contact.title": "Έτοιμοι να σχεδιάσετε τη διαμονή σας;",
+      "contact.subtitle": "Επικοινωνήστε απευθείας — απαντάμε συνήθως εντός λίγων ωρών.",
+      "contact.call": "Καλέστε Μας",
+      "contact.email": "Στείλτε Email",
+      "contact.whatsapp": "WhatsApp",
+      "contact.whatsapp_cta": "Μηνύματα άμεσα",
+
+      "footer.tagline": "Ένα ιδιωτικό εξοχικό σπίτι στο Αιγαίο.",
+      "footer.rights": "Με την επιφύλαξη παντός δικαιώματος."
+    },
+
+    fr: {
+      "nav.about": "À propos",
+      "nav.amenities": "Équipements",
+      "nav.gallery": "Galerie",
+      "nav.location": "Emplacement",
+      "nav.contact": "Contact",
+
+      "hero.eyebrow": "Une Retraite Privée sur la Mer Égée",
+      "hero.tagline": "Là où la mer rencontre le calme, et où l'été ralentit.",
+      "hero.cta": "Planifiez Votre Séjour",
+
+      "about.eyebrow": "La Villa",
+      "about.title": "Une maison sculptée de lumière et de pierre",
+      "about.p1": "Nichée au-dessus d'une crique tranquille, Villa Georgia Dream allie l'architecture cycladique blanchie à la chaux à des intérieurs chaleureux et contemporains. Chaque pièce s'ouvre à la brise marine, et chaque soirée se termine par un ciel doré au-dessus de l'eau. C'est une maison conçue pour les matins paisibles, les longs déjeuners, et une tranquillité rare ailleurs.",
+      "about.p2": "Pouvant accueillir jusqu'à huit personnes dans quatre chambres, la villa est idéale pour les familles et amis en quête d'intimité, de confort et d'une authentique vie insulaire.",
+      "about.fact1": "Chambres",
+      "about.fact2": "Salles de bain",
+      "about.fact3": "Personnes",
+      "about.fact4": "Surface Habitable",
+
+      "amenities.eyebrow": "Confort & Simplicité",
+      "amenities.title": "Tout ce qu'il faut, rien de superflu",
+      "amenities.wifi.title": "WiFi Haut Débit",
+      "amenities.wifi.desc": "Restez connecté sur la terrasse ou près de la piscine.",
+      "amenities.ac.title": "Climatisation",
+      "amenities.ac.desc": "Climatisation dans chaque chambre et espace de vie.",
+      "amenities.kitchen.title": "Cuisine Entièrement Équipée",
+      "amenities.kitchen.desc": "Tout ce qu'il faut pour cuisiner comme un local.",
+      "amenities.parking.title": "Parking Privé",
+      "amenities.parking.desc": "Stationnement sécurisé pour votre véhicule.",
+      "amenities.seaview.title": "Vue sur la Mer",
+      "amenities.seaview.desc": "Vue imprenable sur la mer Égée depuis chaque terrasse.",
+      "amenities.family.title": "Idéal pour les Familles",
+      "amenities.family.desc": "Espace sûr et spacieux, confortable pour tous les âges.",
+
+      "gallery.eyebrow": "Un Aperçu",
+      "gallery.title": "Un aperçu de l'intérieur de Villa Georgia Dream",
+
+      "location.eyebrow": "Nous Trouver",
+      "location.title": "À deux pas de la mer, proche de tout",
+      "location.desc": "Villa Georgia Dream se trouve sur une colline tranquille, à seulement une minute à pied d'une crique abritée, avec la place du village, les tavernes et les marchés locaux à quelques minutes en voiture.",
+      "location.item1": "1 min à pied de la plage la plus proche",
+      "location.item2": "10 min en voiture du centre du village",
+      "location.item3": "35 min de l'aéroport",
+      "location.item4": "Tavernes, cafés et boulangeries à proximité",
+
+      "contact.eyebrow": "Contactez-Nous",
+      "contact.title": "Prêt à planifier votre séjour ?",
+      "contact.subtitle": "Contactez-nous directement — nous répondons généralement en quelques heures.",
+      "contact.call": "Appelez-Nous",
+      "contact.email": "Envoyez un Email",
+      "contact.whatsapp": "WhatsApp",
+      "contact.whatsapp_cta": "Écrivez-nous instantanément",
+
+      "footer.tagline": "Une maison de vacances privée au bord de la mer Égée.",
+      "footer.rights": "Tous droits réservés."
+    }
+  };
+
+  const STORAGE_KEY = "villa-georgio-dream-lang";
+
+  /* -----------------------------------------------------------------
+     2. LANGUAGE SWITCHER
+     ----------------------------------------------------------------- */
+  function applyLanguage(lang) {
+    const dict = translations[lang] || translations.en;
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) {
+        el.textContent = dict[key];
+      }
+    });
+
+    const htmlLangMap = { en: "en", gr: "el", fr: "fr" };
+    document.documentElement.setAttribute("lang", htmlLangMap[lang] || "en");
+
+    document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
+      const isActive = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", String(isActive));
+    });
+
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch (e) {
+      /* localStorage unavailable (e.g. private browsing) — fail silently */
+    }
+  }
+
+  function initLanguageSwitcher() {
+    const buttons = document.querySelectorAll(".lang-switch__btn");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+    });
+
+    let savedLang = "en";
+    try {
+      savedLang = localStorage.getItem(STORAGE_KEY) || "en";
+    } catch (e) {
+      savedLang = "en";
+    }
+    applyLanguage(savedLang);
+  }
+
+  /* -----------------------------------------------------------------
+     3. STICKY NAVIGATION STATE
+     ----------------------------------------------------------------- */
+  function initStickyNav() {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+
+    const toggleScrolledClass = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
+    };
+
+    toggleScrolledClass();
+    window.addEventListener("scroll", toggleScrolledClass, { passive: true });
+  }
+
+  /* -----------------------------------------------------------------
+     4. MOBILE MENU TOGGLE
+     ----------------------------------------------------------------- */
+  function initMobileMenu() {
+    const toggle = document.getElementById("navToggle");
+    const menu = document.getElementById("navMenu");
+    if (!toggle || !menu) return;
+
+    const closeMenu = () => {
+      menu.classList.remove("is-open");
+      toggle.classList.remove("is-active");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("is-open");
+      toggle.classList.toggle("is-active", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Close the mobile menu after a nav link is tapped
+    menu.querySelectorAll(".nav__link").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+
+  /* -----------------------------------------------------------------
+     5. GALLERY LIGHTBOX
+     ----------------------------------------------------------------- */
+  function initLightbox() {
+    const items = Array.from(document.querySelectorAll(".gallery__item"));
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const closeBtn = document.getElementById("lightboxClose");
+    const prevBtn = document.getElementById("lightboxPrev");
+    const nextBtn = document.getElementById("lightboxNext");
+
+    if (!items.length || !lightbox || !lightboxImg) return;
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = (index + items.length) % items.length;
+      const item = items[currentIndex];
+      const fullSrc = item.getAttribute("data-full");
+      const altText = item.querySelector("img")?.getAttribute("alt") || "";
+
+      lightboxImg.setAttribute("src", fullSrc);
+      lightboxImg.setAttribute("alt", altText);
+    }
+
+    function openLightbox(index) {
+      showImage(index);
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImg.setAttribute("src", "");
+      document.body.style.overflow = "";
+    }
+
+    items.forEach((item, index) => {
+      item.addEventListener("click", () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+    nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+
+    // Click outside the image closes the lightbox
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard support: Escape closes, arrows navigate
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showImage(currentIndex + 1);
+      if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+    });
+  }
+
+  /* -----------------------------------------------------------------
+     6. FOOTER YEAR
+     ----------------------------------------------------------------- */
+  function initFooterYear() {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  }
+
+  /* -----------------------------------------------------------------
+     INIT
+     ----------------------------------------------------------------- */
+  document.addEventListener("DOMContentLoaded", () => {
+    initLanguageSwitcher();
+    initStickyNav();
+    initMobileMenu();
+    initLightbox();
+    initFooterYear();
+  });
+})();
