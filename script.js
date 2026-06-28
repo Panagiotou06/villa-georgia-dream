@@ -21,14 +21,14 @@
       "nav.location": "Location",
       "nav.contact": "Contact",
 
-      "hero.eyebrow": "A Private Retreat on the Aegean",
+      "hero.eyebrow": " Seafront with Private Pool",
       "hero.tagline": "Where the sea meets stillness, and summer slows down.",
       "hero.cta": "Plan Your Stay",
 
       "about.eyebrow": "The Villa",
       "about.title": "A home carved from light and stone",
-      "about.p1": "Tucked above a quiet cove, Villa Georgia Dream blends whitewashed Cycladic architecture with warm, contemporary interiors. Every room opens to the sea breeze, and every evening ends with the sky turning gold over the water. This is a house built for slow mornings, long lunches, and the kind of quiet that's hard to find anywhere else.",
-      "about.p2": "Sleeping up to eight guests across four bedrooms, the villa is ideal for families and friends seeking privacy, comfort and an authentic taste of island life.",
+      "about.p1": "Escape to this stunning seafront villa just 50 km from Athens, offering breathtaking sea views and complete tranquility. Relax by the spacious private pool, enjoy the bright and sun-filled living spaces, and wake up to the soothing sound of the waves. It is the perfect choice for families, couples, or groups seeking privacy, comfort, and a peaceful getaway. An ideal destination to unwind while staying close to Athens and the beautiful coastal attractions of the area.",
+      "about.p2": "On the ground floor, you will find a bright living room, a dining area, a fully equipped open-plan kitchen, and the master bedroom with an en-suite bathroom. The first floor features two double bedrooms and a shared bathroom, all offering beautiful views of the pool and the sea. The basement includes a table tennis area, an additional bathroom, and accommodation for two extra guests on single beds (with a fan instead of air conditioning). Outside, you can relax by the private pool or take a short walk to the beach, which is easily accessible via a small harbor.",
       "about.fact1": "Bedrooms",
       "about.fact2": "Bathrooms",
       "about.fact3": "Guests",
@@ -41,24 +41,24 @@
       "amenities.ac.title": "Air Conditioning",
       "amenities.ac.desc": "Climate control in every bedroom and living space.",
       "amenities.kitchen.title": "Fully Equipped Kitchen",
-      "amenities.kitchen.desc": "Everything you need to cook like a local.",
+      "amenities.kitchen.desc": "Everything you need to cook.",
       "amenities.parking.title": "Private Parking",
       "amenities.parking.desc": "Secure on-site parking for your vehicle.",
       "amenities.seaview.title": "Sea View",
-      "amenities.seaview.desc": "Uninterrupted Aegean views from every terrace.",
+      "amenities.seaview.desc": "Uninterrupted sea views from every terrace.",
       "amenities.family.title": "Family Friendly",
       "amenities.family.desc": "Safe, spacious and comfortable for all ages.",
 
       "gallery.eyebrow": "Take a Look",
-      "gallery.title": "A glimpse inside Villa Georgia Dream",
+      "gallery.title": "Experience Villa Georgia Dream",
 
       "location.eyebrow": "Find Us",
       "location.title": "Steps from the sea, close to everything",
-      "location.desc": "Villa Georgia Dream sits on a quiet hillside just a five-minute walk from a sheltered swimming cove, with the village square, tavernas and local markets only minutes away by car.",
+      "location.desc": "Within approximately 200 meters of the villa, you will find tavernas, cafés, a bakery, a butcher shop, and a mini market, along with the option of food and essential item delivery. Just 5 km away lies a charming village with bars, tavernas, cafés, ice cream shops, and various stores. A short drive away, you can visit the Corinth Canal and the Loutraki Casino, two of the area’s most notable attractions.",
       "location.item1": "1 min walk to the nearest beach",
       "location.item2": "10 min drive to the village centre",
-      "location.item3": "35 min from the airport",
-      "location.item4": "Tavernas, cafés and bakeries nearby",
+      "location.item3": "55 min from the airport",
+      "location.item4": "Tavernas, cafés and bakery nearby",
 
       "contact.eyebrow": "Get in Touch",
       "contact.title": "Ready to plan your stay?",
@@ -68,7 +68,7 @@
       "contact.whatsapp": "WhatsApp",
       "contact.whatsapp_cta": "Message us instantly",
 
-      "footer.tagline": "A private holiday house by the Aegean Sea.",
+      "footer.tagline": "A private holiday house.",
       "footer.rights": "All rights reserved."
     },
 
@@ -79,14 +79,14 @@
       "nav.location": "Τοποθεσία",
       "nav.contact": "Επικοινωνία",
 
-      "hero.eyebrow": "Ένα Ιδιωτικό Καταφύγιο στο Αιγαίο",
+      "hero.eyebrow": "Παραθαλάσσια βίλα με ιδιωτική πισίνα",
       "hero.tagline": "Εκεί όπου η θάλασσα συναντά τη γαλήνη και το καλοκαίρι κυλά αργά.",
       "hero.cta": "Σχεδιάστε τη Διαμονή Σας",
 
       "about.eyebrow": "Η Βίλα",
       "about.title": "Ένα σπίτι σκαλισμένο από φως και πέτρα",
-      "about.p1": "Χτισμένη πάνω από έναν ήσυχο κολπίσκο, η Villa Georgia Dream συνδυάζει την ασπρισμένη κυκλαδίτικη αρχιτεκτονική με ζεστές, σύγχρονες εσωτερικές διαμορφώσεις. Κάθε δωμάτιο ανοίγει στο θαλάσσιο αεράκι, και κάθε βράδυ τελειώνει με τον ουρανό να βάφεται χρυσός πάνω από το νερό. Είναι ένα σπίτι φτιαγμένο για αργά πρωινά, μακρά γεύματα και μια ησυχία που σπάνια συναντάς αλλού.",
-      "about.p2": "Φιλοξενώντας έως οκτώ άτομα σε τέσσερα υπνοδωμάτια, η βίλα είναι ιδανική για οικογένειες και φίλους που αναζητούν ιδιωτικότητα, άνεση και μια αυθεντική γεύση νησιώτικης ζωής.",
+      "about.p1": "Αποδράστε σε αυτή την υπέροχη παραθαλάσσια βίλα, μόλις 50 χλμ. από την Αθήνα, με εκπληκτική θέα στη θάλασσα και απόλυτη ηρεμία. Χαλαρώστε στη μεγάλη ιδιωτική πισίνα, απολαύστε τους φωτεινούς, ηλιόλουστους χώρους και ξυπνήστε με τον ήχο των κυμάτων. Είναι η ιδανική επιλογή για οικογένειες, ζευγάρια ή παρέες που αναζητούν ιδιωτικότητα, άνεση και μια ήρεμη απόδραση. Ένας μοναδικός προορισμός για να ξεκουραστείτε, σε κοντινή απόσταση από την Αθήνα και τα όμορφα παραθαλάσσια αξιοθέατα της περιοχής.",
+      "about.p2": "Στο ισόγειο υπάρχει φωτεινό καθιστικό, τραπεζαρία, πλήρως εξοπλισμένη κουζίνα αμερικανικού τύπου και η κύρια κρεβατοκάμαρα με ιδιωτικό μπάνιο. Στον πρώτο όροφο βρίσκονται δύο υπνοδωμάτια με διπλά κρεβάτια και ένα κοινόχρηστο μπάνιο, όλα με θέα στην πισίνα και τη θάλασσα. Στο υπόγειο υπάρχει τραπέζι πινγκ πονγκ, ένα επιπλέον μπάνιο και δυνατότητα φιλοξενίας δύο ακόμη ατόμων σε μονά κρεβάτια (με ανεμιστήρα και χωρίς κλιματισμό). Στον εξωτερικό χώρο μπορείτε να απολαύσετε την ιδιωτική πισίνα ή να περπατήσετε εύκολα μέχρι την παραλία μέσω ενός μικρού λιμανιού.",
       "about.fact1": "Υπνοδωμάτια",
       "about.fact2": "Μπάνια",
       "about.fact3": "Επισκέπτες",
@@ -99,24 +99,24 @@
       "amenities.ac.title": "Κλιματισμός",
       "amenities.ac.desc": "Έλεγχος θερμοκρασίας σε κάθε δωμάτιο και χώρο διαβίωσης.",
       "amenities.kitchen.title": "Πλήρως Εξοπλισμένη Κουζίνα",
-      "amenities.kitchen.desc": "Όλα όσα χρειάζεστε για να μαγειρέψετε σαν ντόπιος.",
+      "amenities.kitchen.desc": "Όλα όσα χρειάζεστε για να μαγειρέψετε.",
       "amenities.parking.title": "Ιδιωτική Θέση Στάθμευσης",
       "amenities.parking.desc": "Ασφαλής χώρος στάθμευσης για το όχημά σας.",
       "amenities.seaview.title": "Θέα στη Θάλασσα",
-      "amenities.seaview.desc": "Απεριόριστη θέα στο Αιγαίο από κάθε βεράντα.",
+      "amenities.seaview.desc": "Απεριόριστη θέα στη θάλασσα από κάθε βεράντα.",
       "amenities.family.title": "Φιλικό προς Οικογένειες",
       "amenities.family.desc": "Ασφαλής, ευρύχωρος χώρος, άνετος για όλες τις ηλικίες.",
 
       "gallery.eyebrow": "Μια Γεύση",
-      "gallery.title": "Μια ματιά στο εσωτερικό της Villa Georgia Dream",
+      "gallery.title": "Ανακαλύψτε τη Villa Georgia Dream",
 
       "location.eyebrow": "Βρείτε Μας",
       "location.title": "Λίγα βήματα από τη θάλασσα, κοντά σε όλα",
-      "location.desc": "Η Villa Georgia Dream βρίσκεται σε έναν ήσυχο λόφο, μόλις πέντε λεπτά με τα πόδια από έναν προστατευμένο κολπίσκο, με την πλατεία του χωριού, ταβέρνες και τοπικές αγορές λίγα λεπτά με το αυτοκίνητο.",
+      "location.desc": "Σε απόσταση περίπου 200 μέτρων από τη βίλα θα βρείτε ταβέρνες, καφέ, φούρνο, κρεοπωλείο και μίνι μάρκετ, ενώ υπάρχει και δυνατότητα διανομής φαγητού και ειδών πρώτης ανάγκης. Μόλις 5 χλμ. μακριά βρίσκεται ένα όμορφο χωριό με μπαρ, ταβέρνες, καφετέριες, παγωτατζίδικα και καταστήματα, ενώ σε μικρή απόσταση με το αυτοκίνητο μπορείτε να επισκεφθείτε τη Διώρυγα της Κορίνθου και το Καζίνο Λουτρακίου.",
       "location.item1": "1 λεπτό με τα πόδια από την παραλία",
       "location.item2": "10 λεπτά με το αυτοκίνητο από το κέντρο του χωριού",
-      "location.item3": "35 λεπτά από το αεροδρόμιο",
-      "location.item4": "Ταβέρνες, καφέ και φούρνοι εδώ κοντά",
+      "location.item3": "55 λεπτά από το αεροδρόμιο",
+      "location.item4": "Ταβέρνες, καφέ και φούρνος εδώ κοντά",
 
       "contact.eyebrow": "Επικοινωνήστε",
       "contact.title": "Έτοιμοι να σχεδιάσετε τη διαμονή σας;",
@@ -126,7 +126,7 @@
       "contact.whatsapp": "WhatsApp",
       "contact.whatsapp_cta": "Μηνύματα άμεσα",
 
-      "footer.tagline": "Ένα ιδιωτικό εξοχικό σπίτι στο Αιγαίο.",
+      "footer.tagline": "Ένα ιδιωτικό εξοχικό σπίτι.",
       "footer.rights": "Με την επιφύλαξη παντός δικαιώματος."
     },
 
@@ -137,14 +137,14 @@
       "nav.location": "Emplacement",
       "nav.contact": "Contact",
 
-      "hero.eyebrow": "Une Retraite Privée sur la Mer Égée",
+      "hero.eyebrow": "Villa en bord de mer avec piscine privée",
       "hero.tagline": "Là où la mer rencontre le calme, et où l'été ralentit.",
       "hero.cta": "Planifiez Votre Séjour",
 
       "about.eyebrow": "La Villa",
       "about.title": "Une maison sculptée de lumière et de pierre",
-      "about.p1": "Nichée au-dessus d'une crique tranquille, Villa Georgia Dream allie l'architecture cycladique blanchie à la chaux à des intérieurs chaleureux et contemporains. Chaque pièce s'ouvre à la brise marine, et chaque soirée se termine par un ciel doré au-dessus de l'eau. C'est une maison conçue pour les matins paisibles, les longs déjeuners, et une tranquillité rare ailleurs.",
-      "about.p2": "Pouvant accueillir jusqu'à huit personnes dans quatre chambres, la villa est idéale pour les familles et amis en quête d'intimité, de confort et d'une authentique vie insulaire.",
+      "about.p1": "Échappez-vous dans cette magnifique villa en bord de mer, à seulement 50 km d’Athènes, offrant une vue imprenable sur la mer et une tranquillité absolue. Détendez-vous dans la grande piscine privée, profitez des espaces lumineux baignés de soleil et réveillez-vous au son des vagues. C’est le choix idéal pour les familles, les couples ou les groupes d’amis à la recherche d’intimité, de confort et d’une escapade paisible. Une destination unique pour se reposer, à proximité d’Athènes et des magnifiques sites côtiers de la région.",
+      "about.p2": "Au rez-de-chaussée, il y a un salon lumineux, une salle à manger, une cuisine ouverte entièrement équipée de style américain et la chambre principale avec salle de bain privative, au premier étage se trouvent deux chambres doubles et une salle de bain commune avec vue sur la piscine et la mer, au sous-sol il y a une table de ping-pong, une salle de bain supplémentaire et la possibilité d’accueillir deux personnes supplémentaires dans des lits simples (avec ventilateur et sans climatisation), et à l’extérieur vous pouvez profiter de la piscine privée ou rejoindre facilement la plage à pied via un petit port.",
       "about.fact1": "Chambres",
       "about.fact2": "Salles de bain",
       "about.fact3": "Personnes",
@@ -157,24 +157,24 @@
       "amenities.ac.title": "Climatisation",
       "amenities.ac.desc": "Climatisation dans chaque chambre et espace de vie.",
       "amenities.kitchen.title": "Cuisine Entièrement Équipée",
-      "amenities.kitchen.desc": "Tout ce qu'il faut pour cuisiner comme un local.",
+      "amenities.kitchen.desc": "Tout ce qu'il faut pour cuisiner.",
       "amenities.parking.title": "Parking Privé",
       "amenities.parking.desc": "Stationnement sécurisé pour votre véhicule.",
       "amenities.seaview.title": "Vue sur la Mer",
-      "amenities.seaview.desc": "Vue imprenable sur la mer Égée depuis chaque terrasse.",
+      "amenities.seaview.desc": "Vue imprenable sur la mer depuis chaque terrasse.",
       "amenities.family.title": "Idéal pour les Familles",
       "amenities.family.desc": "Espace sûr et spacieux, confortable pour tous les âges.",
 
       "gallery.eyebrow": "Un Aperçu",
-      "gallery.title": "Un aperçu de l'intérieur de Villa Georgia Dream",
+      "gallery.title": "Découvrez la Villa Georgia Dream",
 
       "location.eyebrow": "Nous Trouver",
       "location.title": "À deux pas de la mer, proche de tout",
-      "location.desc": "Villa Georgia Dream se trouve sur une colline tranquille, à seulement une minute à pied d'une crique abritée, avec la place du village, les tavernes et les marchés locaux à quelques minutes en voiture.",
+      "location.desc": "À environ 200 mètres de la villa, vous trouverez des tavernes, des cafés, une boulangerie, une boucherie et une supérette, ainsi qu’un service de livraison de repas et de produits de première nécessité. À seulement 5 km se trouve un charmant village avec des bars, tavernes, cafés, glaciers et boutiques. À une courte distance en voiture, vous pourrez visiter le canal de Corinthe et le casino de Loutraki.",
       "location.item1": "1 min à pied de la plage la plus proche",
       "location.item2": "10 min en voiture du centre du village",
-      "location.item3": "35 min de l'aéroport",
-      "location.item4": "Tavernes, cafés et boulangeries à proximité",
+      "location.item3": "55 min de l'aéroport",
+      "location.item4": "Tavernes, cafés et boulangerie à proximité",
 
       "contact.eyebrow": "Contactez-Nous",
       "contact.title": "Prêt à planifier votre séjour ?",
@@ -184,7 +184,7 @@
       "contact.whatsapp": "WhatsApp",
       "contact.whatsapp_cta": "Écrivez-nous instantanément",
 
-      "footer.tagline": "Une maison de vacances privée au bord de la mer Égée.",
+      "footer.tagline": "Une maison de vacances privée.",
       "footer.rights": "Tous droits réservés."
     }
   };
