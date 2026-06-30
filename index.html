@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Villa Georgia Dream — Private Holiday House</title>
+  <title>Villa Georgia Dream | LuxuryPrivate Holiday House</title>
   <meta name="description" content="Villa Georgia Dream — a private holiday house by the Aegean Sea. Serene, elegant and made for unforgettable summers.">
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VacationRental",
+      "name": "Villa Georgia Dream",
+      "description": "Villa Georgia Dream is a luxury vacation villa offering private accommodation, beautiful views, and modern amenities for your holiday.",
+      "url": "https://villageorgiadream.com",
+      "telephone": "+306947499040",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kineta",
+        "addressLocality": "Attica",
+        "postalCode": "19100",
+        "addressCountry": "GR"
+      },
+      "image": [
+        "https://villageorgiadream.com/assets/hero-pool-pink-float.jpg",
+        "https://villageorgiadream.com/assets/living-room-sea-view-about.jpg"
+      ]
+    }
+  </script>
   <!-- Google Fonts: Cormorant Garamond (display) + Jost (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +42,7 @@
   <!-- ============ NAVIGATION ============ -->
   <header class="site-header" id="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#hero" class="nav__brand"><em>Villa Georgia Dream</em></a>
-
+      <a href="#hero" class="nav__brand">Villa Georgia Dream</a>
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
@@ -60,7 +80,7 @@
 
       <div class="hero__content container">
         <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">A Private Retreat on the Aegean</p>
-        <h1 class="hero__title"><em>Villa Georgia Dream</em></h1>
+        <h1 class="hero__title">Villa Georgia Dream</h1>
         <p class="hero__tagline" data-i18n="hero.tagline">Where the sea meets stillness, and summer slows down.</p>
         <a href="#contact" class="btn btn--light hero__cta" data-i18n="hero.cta">Plan Your Stay</a>
       </div>
@@ -245,11 +265,11 @@
             <li data-i18n="location.item3">35 min from the airport</li>
             <li data-i18n="location.item4">Tavernas, cafés and bakeries nearby</li>
           </ul>
-        </div>
+        </div> 
         <div class="location__map">
           <!-- Map centered on Kineta, Greece. The overlay link opens the exact Google Maps listing. -->
           <iframe
-            src="https://maps.google.com/maps?q=37.9671404,23.2128558&hl=en&z=15&output=embed"
+            src="https://maps.google.com/maps?q=37.9671404,23.2128558&hl=en&z=15&output=embed" 
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             tabindex="-1"
